@@ -1,6 +1,6 @@
 # Building a simple Ethereum DApp with Vue, uPort, Web3 and Ganache
 
-Works with Node version 10 
+Source code Ethereum Developer Meetup 6 - Works with Node version 10 
 
 ## Project setup
 ```
