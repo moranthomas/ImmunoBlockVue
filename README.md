@@ -1,4 +1,6 @@
-# hello-world-with-router
+# Building a simple Ethereum DApp with Vue, uPort, Web3 and Ganache
+
+Works with Node version 10 
 
 ## Project setup
 ```
