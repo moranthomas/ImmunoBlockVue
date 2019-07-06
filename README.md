@@ -1,6 +1,6 @@
-# Building a simple Ethereum DApp with Vue, uPort, Web3 and Ganache
+# Ethereum DApp with Vue, uPort, Web3, IPFS and Ganache
 
-Source code Ethereum Developer Meetup 6 - Works with Node version 10 
+Source code for ImmunoBlock project as part of the gitcoin Beyond Blockchain hackathon 
 
 ## Project setup
 ```
