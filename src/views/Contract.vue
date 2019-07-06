@@ -2,137 +2,61 @@
     <div class="trn-container">
 
         <div class="row">
-                <div class="col-md-8">
-                     <h2> Account Transactions (Web3.js) </h2>
-                </div>
-                <div class="col-md-4">
-                   <div>Network:
-                        <select id="networksDropdown" ref="networksDropdownRef" v-model="selected" v-on:change="onChangeNetwork">
-                        <option v-for="(item, key) in networks" :value="key">
-                                {{item}}
-                            </option>
-                        </select>
-                    </div>
-                </div>
+            <div class="col-md-8">
+                    <h3> Interacting With A Deployed Contract </h3>
+                    <h4> (Deployed e.g. Using Remix to Ganache)</h4>
             </div>
-        <hr>
-
-        <div>    <!-- Grid Div -->
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="name" class="col-lg-2 control-label"><h4> Node</h4></label>
-                </div>
-                <div class="col-md-8">
-                    <button  @click="getNodeInfoClicked">Get Node Info</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                     <p>Node Info :  </p>
-                </div>
-                <div class="col-md-8">
-                    <base-input disabled ref="NodeInfoInputField" id="NodeInfo" type="text"></base-input>
-                </div>
-            </div>
-        </div>
-
-
-        <hr>
-        <div>    <!-- Grid Div -->
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="name" class="col-lg-2 control-label"><h4>Balance</h4></label>
-                </div>
-                <div class="col-md-8">
-                    <button ref="popAccounts" id="popAccounts" @click="populateAccountsClicked">Populate Accounts</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <span>Choose Account : {{ selected }} </span><span>&nbsp;</span>
-                </div>
-                <div class="col-md-8">
-                    <select id="accountsDropdown" ref="accountsDropdownRef" v-model="selected" v-on:change="onChange">
-                        <option v-for="(item, key) in accounts" :value="key">
+            <div class="col-md-4">
+                <div>Network:
+                    <select id="networksDropdown" ref="networksDropdownRef" v-model="selected" v-on:change="onChangeNetwork">
+                    <option v-for="(item, key) in networks" :value="key">
                             {{item}}
                         </option>
                     </select>
                 </div>
             </div>
-            </br>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Selected Account : </p>
-                    <!--<base-input placeholder="" :valid="true"></base-input> -->
-                </div>
-                <div class="col-md-6">
-                    <input id="Account" ref="accountRef" type="text"> </input>
-                </div>
-            </div>
-             <div class="row">
-                <div class="col-md-6">
-                     <button ref="checkBalance" id="checkBalance" @click="checkBalanceClicked">Check Balance</button>
-                </div>
-                <div class="col-md-6">
-                  <p>Balance : <input id="Balance" ref="balanceRef" type="text"></p>
-                </div>
-            </div>
-
-            <div>
-        </div>
         </div>
 
-        <hr>
+     <hr>
 
+             <div>    <!-- Grid Div -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="name" class="col-lg-2 control-label"><h4> Node</h4></label>
+                    </div>
+                    <div class="col-md-8">
+                        <button @click="getNodeInfoClicked">Get Node Info</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Node Info :  </p>
+                    </div>
+                    <div class="col-md-8">
+                        <base-input disabled ref="NodeInfoInputField" id="NodeInfo" type="text"></base-input>
+                    </div>
+                </div>
+            </div>
+
+
+     <hr>
         <div>    <!-- Grid Div -->
             <div class="row">
-                <div class="col-md-6">
-                    <label for="name" class="col-lg-2 control-label"><h4>Transfer</h4></label>
-                </div>
-                <div class="col-md-6">
-                   <p>&nbsp;</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                     <p>From:<input ref="fromRef" id="From" type="text"> </p>
-                </div>
-            </div>
-            <div class="row">
-                 <div class="col-md-12">
-                    <p>To:<input id="To" ref="toRef" type="text"> </p>
-                </div>
-            </div>
-              <div class="row">
-                 <div class="col-md-6">
-                   <p>Amount:<input id="Amount" ref="amountRef" type="text"></p>
-                </div>
-                <div class="col-md-6">
-                    <button id="Transfer" @click="transferFunds">Transfer</button>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-4">
-                    <p>Transaction Hash : </p>
+                    <button @click="getMyVariable">Get Variable </button>
                 </div>
                 <div class="col-md-8">
-                    <input id="Tx" ref="txHashRef" type="text"> </input>
+                    <button @click="setMyVariable(12)">Change Variable to 12</button>
                 </div>
             </div>
-                        <div class="row">
-                <div class="col-md-4">
-                    <p>Result : </p>
-                </div>
-                <div class="col-md-8">
-                    <base-input disabled ref="resultRef" id="Result" type="text"></base-input>
-                    <!--<input id="Result" ref="resultRef" type="text"></input>-->
-                </div>
+            <div class="row">
+                <base-input disabled ref="myVariableInputField" id="myVariableField" type="text"></base-input>
+                <!--<span id="myVariable"></span> MyVariable Value-->
             </div>
-
         </div>
 
-        <hr>
-    </div>
+    </div>   <!-- end  container div -->
+
 
 </template>
 
@@ -143,6 +67,12 @@
 
     let web3;
     let web3Provider;
+    let contract_instance;
+
+    // Get the contract address from the remix deploy tab
+    let contract_address = "0x10ff1115b527fa00b58afd62eae7c419d0052979";
+    // Get the ABI from the remix compile tab > details
+    let contract_abi = [ { "constant": false, "inputs": [], "name": "kill", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "myNewVariable", "type": "uint256" } ], "name": "setMyVariable", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "payable": true, "stateMutability": "payable", "type": "constructor" }, { "payable": true, "stateMutability": "payable", "type": "fallback" }, { "constant": true, "inputs": [], "name": "getMyBalance", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "getMyVariable", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" } ];
 
     export default {
         data () {
@@ -154,9 +84,24 @@
         },
         mounted() {
             this.loadWeb3Provider();
+            contract_instance = new web3.eth.Contract(contract_abi, contract_address);
         },
         methods: {
 
+            // See https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html for docs
+
+            getMyVariable() {
+                //To-Do - create a dropdown of accounts and populate the from using that.
+                contract_instance.methods.getMyVariable().call({from: contract_address}, (error, result) => {
+                    this.$refs.myVariableInputField.value = result;
+                    console.log("SUCCESS!");
+                });
+            },
+            setMyVariable() {
+                contract_instance.methods.setMyVariable(12).call({from: contract_address}, (error, result) => {
+                    console.log("SUCCESSFULLY UPDATED!");
+                });
+            },
             loadWeb3Provider: function () {
 
                 const infuraUrl = "http://mainnet.infura.io/v3/53dbf207e63c42e99cacb63c2d41ec4f";

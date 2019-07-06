@@ -8,10 +8,10 @@
                   :type="menu.type"
                   effect="dark"
                   expand
-                  title="Ethereum Developers Meetup"
+                  title="Reinventing Healthcare 3.0"
                   class="mt-4 lead text-white"
                   :content-id="`navbar-${menu.type}`">
-        <img src="../public/img/eth-logo.jpg" width="50px" height="50px"/>
+        <img src="./assets/gitcoin_logo.jpeg" width="50px" height="50px"/>
         <component :is="menu.menuComponent"></component>
 
         </base-nav>

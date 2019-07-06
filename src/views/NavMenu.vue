@@ -15,6 +15,9 @@
         <li class="nav-item" v-if="this.isAuthenticated==='true'">
             <router-link class="nav-link" to="/transactions">Transactions</router-link>
         </li>
+        <li class="nav-item" v-if="this.isAuthenticated==='true'">
+            <router-link class="nav-link" to="/contract">Contract</router-link>
+        </li>
 
          <li class="nav-item">
             <a class="nav-link nav-link-icon" href="#">

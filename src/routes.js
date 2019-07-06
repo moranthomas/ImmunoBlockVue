@@ -38,6 +38,10 @@ export const routes = [
         name: 'transactions',
         component: () => import( /* webpackChunkName: "profile" */ './views/Transactions.vue')
     }, {
+        path: '/contract',
+        name: 'contract',
+        component: () => import( /* webpackChunkName: "profile" */ './views/Contract.vue')
+      }, {
         path: '/register',
         name: 'register',
         display: 'Register',

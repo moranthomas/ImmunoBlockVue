@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/consensys_logo.png">
     <HelloWorld :boundText="parentMessage"/>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      parentMessage: 'Welcome to Your Vue.js App'
+      parentMessage: 'Autoimmune Disease Registry'
     }
   }
 }
