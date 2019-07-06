@@ -1,8 +1,11 @@
-# VueJS Front End for the ImmunoBlock Hackathon Project
+# ImmunoBlock Hackathon Project
 
 Source code for ImmunoBlock project as part of the gitcoin Beyond Blockchain hackathon 
 
 ## Project setup
+
+Requires Node 10+
+
 ```
 npm install
 ```
