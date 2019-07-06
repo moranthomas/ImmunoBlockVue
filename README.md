@@ -1,4 +1,4 @@
-# Using VueJS as the front end for the ImmunoBlock Project
+# VueJS Front End for the ImmunoBlock Hackathon Project
 
 Source code for ImmunoBlock project as part of the gitcoin Beyond Blockchain hackathon 
 
