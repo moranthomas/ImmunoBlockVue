@@ -1,4 +1,4 @@
-# Ethereum DApp with Vue, uPort, Web3, IPFS and Ganache
+# Ethereum DApp with Vue and IPFS for ImmunoBlock Project
 
 Source code for ImmunoBlock project as part of the gitcoin Beyond Blockchain hackathon 
 
