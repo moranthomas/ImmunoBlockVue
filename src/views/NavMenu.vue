@@ -9,11 +9,11 @@
         <li class="nav-item">
             <router-link class="nav-link" to="/">Home</router-link>
         </li>
-        <li class="nav-item" v-if="this.isAuthenticated==='true'">
-            <router-link class="nav-link" to="/profile">Profile</router-link>
+         <li class="nav-item" v-if="this.isAuthenticated==='true'">
+            <router-link class="nav-link" to="/survey">Survey</router-link>
         </li>
         <li class="nav-item" v-if="this.isAuthenticated==='true'">
-            <router-link class="nav-link" to="/transactions">Transactions</router-link>
+            <router-link class="nav-link" to="/profile">Profile</router-link>
         </li>
         <li class="nav-item" v-if="this.isAuthenticated==='true'">
             <router-link class="nav-link" to="/contract">Contract</router-link>

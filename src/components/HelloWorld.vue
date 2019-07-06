@@ -9,7 +9,7 @@
     <h3>Learn More</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">About The Project</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">About Gitcoin</a></li>
+      <li><a href="http://gitcoin.co/issue/ConsenSys/Beyond-Blockchain-Relay/3/3158" target="_blank" rel="noopener">About Gitcoin</a></li>
     </ul>
   </div>
 </template>

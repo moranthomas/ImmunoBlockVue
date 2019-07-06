@@ -34,14 +34,14 @@ export const routes = [
         name: 'profile',
         component: () => import( /* webpackChunkName: "profile" */ './views/Profile.vue')
     }, {
-        path: '/transactions',
-        name: 'transactions',
-        component: () => import( /* webpackChunkName: "profile" */ './views/Transactions.vue')
-    }, {
         path: '/contract',
         name: 'contract',
         component: () => import( /* webpackChunkName: "profile" */ './views/Contract.vue')
-      }, {
+    }, {
+        path: '/survey',
+            name: 'survey',
+            component: () => import( /* webpackChunkName: "profile" */ './views/Survey.vue')
+    }, {
         path: '/register',
         name: 'register',
         display: 'Register',

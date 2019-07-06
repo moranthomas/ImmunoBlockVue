@@ -51,14 +51,6 @@ router.beforeEach((to, from, next) => {
       });
       next({ path: "/login"  });  // go to '/login';
     }
-    if (to.fullPath.startsWith("/transactions")) {
-      router.push({
-        path: "/"
-      });
-      next({
-        path: "/login"
-      }); // go to '/login';
-    }
     if (to.fullPath.startsWith("/contract")) {
       router.push({
         path: "/"
@@ -67,6 +59,14 @@ router.beforeEach((to, from, next) => {
         path: "/login"
       }); // go to '/login';
     }
+    if (to.fullPath.startsWith("/survey")) {
+       router.push({
+         path: "/"
+       });
+       next({
+         path: "/login"
+       }); // go to '/login';
+     }
     next(); // allow to enter route specified in the requested url
   }
 

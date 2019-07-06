@@ -3,56 +3,205 @@
 
         <div class="row">
             <div class="col-md-8">
-                    <h3> Interacting With Deployed Contracts </h3>
-            </div>
-            <div class="col-md-4">
-                <div>Network:
-                    <select id="networksDropdown" ref="networksDropdownRef" v-model="selected" v-on:change="onChangeNetwork">
-                    <option v-for="(item, key) in networks" :value="key">
-                            {{item}}
-                        </option>
-                    </select>
-                </div>
+                    <h3> Autoimmune Diagnosis History </h3>
             </div>
         </div>
-
-     <hr>
-
-             <div>    <!-- Grid Div -->
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="name" class="col-lg-2 control-label"><h4> Node</h4></label>
-                    </div>
-                    <div class="col-md-8">
-                        <button @click="getNodeInfoClicked">Get Node Info</button>
+        <hr>
+        <div>
+            <form onSubmit={this.handleSubmit}>
+                <div className="field">
+                    <label className="label">
+                        1 - Please select the autoimmune diseases you have been diagnosed with.
+                    </label>
+                    <div className="control">
+                        <div className="select">
+                            <select
+                                name="qA-0"
+                                onChange={this.handleChange}
+                                value={quizAnswers[0]}
+                                required={true}
+                            >
+                                <option value="0" disabled={true}>Select an option</option>
+                                <option value="1">Type 1 diabetes</option>
+                                <option value="2">Rheumatoid arthritis (RA)</option>
+                                <option value="3">Psoriasis/psoriatic arthritis</option>
+                                <option value="4">Multiple sclerosis</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <p>Node Info :  </p>
-                    </div>
-                    <div class="col-md-8">
-                        <base-input disabled ref="NodeInfoInputField" id="NodeInfo" type="text"></base-input>
-                    </div>
-                </div>
-            </div>
+                <br />
 
+                <div className="field">
+                    <label className="label">
+                        2 - At what age did you first seek medical advice for your symptoms?
+                    </label>
+                    <div className="control">
+                        <input
+                            className="input"
+                            type="text"
+                            name="qA-1"
+                            required={true}
+                            value=""
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                </div>
+                <br />
 
-     <hr>
-        <div>    <!-- Grid Div -->
-            <div class="row">
-                <div class="col-md-4">
-                    <button @click="getMyVariable">Get Variable </button>
+                <div className="field">
+                    <label className="label">
+                        3 - Was your diagnosis of an autoimmune disease confirmed by a specialist?
+                    </label>
+                    <div className="control">
+                        <label className="radio">
+                            <input
+                                type="radio"
+                                name="qA-2"
+                                required={true}
+                                value="1"
+                                checked="1"
+                                onChange={this.handleChange}
+                            />
+                            Yes
+                        </label>
+                        <label className="radio">
+                            <input
+                                type="radio"
+                                name="qA-2"
+                                value="2"
+                                checked="0"
+                                onChange={this.handleChange}
+                            />
+                            No
+                        </label>
+                    </div>
                 </div>
-                <div class="col-md-8">
-                    <button @click="setMyVariable(12)">Change Variable to 12</button>
+                <br />
+
+                <div className="field">
+                    <label className="label">
+                        4 - At what age were you first diagnosed by a specialist?
+                    </label>
+                    <div className="control">
+                    <input
+                        className="input"
+                        type="number"
+                        name="qA-3"
+                        required={true}
+                        value={quizAnswers[3]}
+                        onChange={this.handleChange}
+                    />
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <base-input disabled ref="myVariableInputField" id="myVariableField" type="text"></base-input>
-                <!--<span id="myVariable"></span> MyVariable Value-->
-            </div>
+                <br />
+
+                <div className="field">
+                    <label className="label">
+                        5 - How many doctors have you seen for your autoimmune disease?
+                    </label>
+                    <div className="control">
+                    <input
+                        className="input"
+                        type="number"
+                        name="qA-4"
+                        required={true}
+                        value={quizAnswers[4]}
+                        onChange={this.handleChange}
+                    />
+                    </div>
+                </div>
+                <br />
+
+                <div className="field">
+                    <label className="label">
+                        6 - How many doctors did you see before you were correctly diagnosed?
+                    </label>
+                    <div className="control">
+                    <input
+                        className="input"
+                        type="number"
+                        name="qA-5"
+                        required={true}
+                        value={quizAnswers[5]}
+                        onChange={this.handleChange}
+                    />
+                    </div>
+                </div>
+                <br />
+
+                <div className="field">
+                    <label className="label">
+                        7 - Do you have first degree relatives with an autoimmune disease?
+                    </label>
+                    <div className="control">
+                        <label className="radio">
+                            <input
+                                type="radio"
+                                name="qA-6"
+                                required={true}
+                                value="1"
+                                checked=""
+                                onChange={this.handleChange}
+                            />
+                            Yes
+                        </label>
+                        <label className="radio">
+                            <input
+                                type="radio"
+                                name="qA-6"
+                                value="2"
+                                checked=""
+                                onChange={this.handleChange}
+                            />
+                            No
+                        </label>
+                    </div>
+                </div>
+                <br />
+
+                <div className="field">
+                    <label className="label">
+                        8 - Do you currently smoke tobacco?
+                    </label>
+                    <div className="control">
+                    <label className="radio">
+                            <input
+                                type="radio"
+                                name="qA-7"
+                                required={true}
+                                value="1"
+                                checked=""
+                                onChange={this.handleChange}
+                            />
+                            Yes
+                        </label>
+                        <label className="radio">
+                            <input
+                                type="radio"
+                                name="qA-7"
+                                value="2"
+                                checked=""
+                                onChange={this.handleChange}
+                            />
+                            No
+                        </label>
+                    </div>
+                </div>
+                <br />
+
+                <div className="field is-grouped">
+                    <div className="control">
+                        <!--<input type="submit" className="button is-primary" value="Submit" />-->
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
+
+
+
+
     </div>   <!-- end  container div -->
 </template>
 
