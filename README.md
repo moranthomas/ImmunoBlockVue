@@ -1,4 +1,4 @@
-# Ethereum DApp with Vue and IPFS for ImmunoBlock Project
+# Using VueJS as the front end for the ImmunoBlock Project
 
 Source code for ImmunoBlock project as part of the gitcoin Beyond Blockchain hackathon 
 
