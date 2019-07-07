@@ -2,8 +2,8 @@
     <div class="trn-container">
 
         <div class="row">
-            <div class="col-md-8">
-                    <h3> Autoimmune Diagnosis History </h3>
+            <div class="col-md-12">
+                    <h3> Manage Autoimmune Diagnosis & History </h3>
             </div>
         </div>
         <hr>

@@ -10,14 +10,17 @@
             <router-link class="nav-link" to="/">Home</router-link>
         </li>
          <li class="nav-item" v-if="this.isAuthenticated==='true'">
-            <router-link class="nav-link" to="/survey">Survey</router-link>
+            <router-link class="nav-link" to="/data">Data</router-link>
         </li>
-        <li class="nav-item" v-if="this.isAuthenticated==='true'">
+         <li class="nav-item" v-if="this.isAuthenticated==='true'">
+            <router-link class="nav-link" to="/consent">Consent</router-link>
+        </li>
+       <!-- <li class="nav-item" v-if="this.isAuthenticated==='true'">
             <router-link class="nav-link" to="/profile">Profile</router-link>
         </li>
         <li class="nav-item" v-if="this.isAuthenticated==='true'">
             <router-link class="nav-link" to="/contract">Contract</router-link>
-        </li>
+        </li>-->
 
          <li class="nav-item">
             <a class="nav-link nav-link-icon" href="#">
