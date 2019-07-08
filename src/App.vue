@@ -3,7 +3,7 @@
     <div id="nav">
       <section class="">
         <!-- Navbar default -->
-        <base-nav v-for="menu in menus"
+        <base-nav ref="navbar-component" v-for="menu in menus"
                   :key="menu.type"
                   :type="menu.type"
                   effect="dark"
