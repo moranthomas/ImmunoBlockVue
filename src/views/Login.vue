@@ -95,12 +95,6 @@
         data() {
             return { user : null  }
         },
-        computed: {
-            spititout: function() {
-                console.log(this.$refs);
-                return 1;
-            }
-        },
         methods: {
             login: function() {
                 // By default it is configured on the Rinkeby test network
@@ -125,14 +119,10 @@
                    if (uport.did) {
                         localStorage.setItem("authenticated", "true")
                         localStorage.setItem("did", uport.did)
-                        self.$router.push({
-                            path: "/data"
-                        });
-                        //JUST WANT TO RELOAD THE NAVBAR - NEEDS BETTER SOLUTION
-                        location.reload();
-
-                        //this.spititout();
                         //self.$root.$forceUpdate();
+                        self.$router.push({
+                            path: "/profile"
+                        });
                         //next();
                     } else {
                         console.log('Create a request if necessary')
